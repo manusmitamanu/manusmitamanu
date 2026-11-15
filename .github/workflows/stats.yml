@@ -2,21 +2,28 @@ name: update stats
 
 on:
   schedule:
-    - cron: "0 */6 * * *"
+    - cron: "*/15 * * * *"
   push:
     branches: [main]
-    paths:
-      - ".github/scripts/make_stats.py"
+  repository_dispatch:
+    types: [update-stats]
   workflow_dispatch:
 
 permissions:
   contents: write
+
+concurrency:
+  group: stats
+  cancel-in-progress: false
 
 jobs:
   stats:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Give GitHub's search index a moment
+        if: github.event_name == 'repository_dispatch'
+        run: sleep 45
       - name: Build stats card
         run: python .github/scripts/make_stats.py
         env:
