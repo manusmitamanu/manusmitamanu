@@ -39,7 +39,7 @@ outside of that: baking, cats...depending on the day.
 <br>
 
 <p>
-  <img src="assets/stats.svg" alt="GitHub stats" width="480">
+  <img src="assets/stats.svg" alt="GitHub stats" width="520">
 </p>
 
 <br>
@@ -49,5 +49,5 @@ outside of that: baking, cats...depending on the day.
 </p>
 
 <p align="center">
-  <img src="assets/black-cat.png" alt="" width="300">
+  <img src="assets/black-cat.png" alt="" width="380">
 </p>
