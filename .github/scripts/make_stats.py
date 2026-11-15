@@ -1,3 +1,4 @@
+import datetime
 import json
 import os
 import urllib.request
@@ -6,31 +7,54 @@ USER = "manusmitamanu"
 OUT = os.path.join(os.path.dirname(__file__), "..", "..", "assets", "stats.svg")
 
 
-def api(path):
+def gql(query, variables=None):
     req = urllib.request.Request(
-        "https://api.github.com" + path,
+        "https://api.github.com/graphql",
+        data=json.dumps({"query": query, "variables": variables or {}}).encode(),
         headers={
             "Authorization": "Bearer " + os.environ.get("GITHUB_TOKEN", ""),
-            "Accept": "application/vnd.github+json",
             "User-Agent": "profile-stats",
         },
     )
     with urllib.request.urlopen(req) as r:
-        return json.load(r)
+        data = json.load(r)
+    if "errors" in data:
+        raise RuntimeError(data["errors"])
+    return data["data"]
 
 
 def fetch():
-    user = api(f"/users/{USER}")
-    stars, page = 0, 1
+    # repos + stars (owned repos; includes private ones if the token can see them)
+    repos, stars, cursor = 0, 0, None
     while True:
-        repos = api(f"/users/{USER}/repos?per_page=100&page={page}")
-        if not repos:
+        d = gql(
+            """query($login:String!,$after:String){user(login:$login){
+              createdAt
+              repositories(first:100, after:$after, ownerAffiliations:OWNER){
+                totalCount pageInfo{hasNextPage endCursor}
+                nodes{stargazerCount}}}}""",
+            {"login": USER, "after": cursor},
+        )["user"]
+        created = d["createdAt"]
+        r = d["repositories"]
+        repos = r["totalCount"]
+        stars += sum(n["stargazerCount"] for n in r["nodes"])
+        if not r["pageInfo"]["hasNextPage"]:
             break
-        stars += sum(r["stargazers_count"] for r in repos)
-        page += 1
-    commits = api(f"/search/commits?q=author:{USER}&per_page=1")["total_count"]
-    prs = api(f"/search/issues?q=author:{USER}+type:pr&per_page=1")["total_count"]
-    return [user["public_repos"], stars, commits, prs]
+        cursor = r["pageInfo"]["endCursor"]
+
+    # commits + PRs, every year since the account was created
+    commits = prs = 0
+    for year in range(int(created[:4]), datetime.date.today().year + 1):
+        c = gql(
+            """query($login:String!,$from:DateTime!,$to:DateTime!){user(login:$login){
+              contributionsCollection(from:$from,to:$to){
+                totalCommitContributions totalPullRequestContributions}}}""",
+            {"login": USER, "from": f"{year}-01-01T00:00:00Z", "to": f"{year}-12-31T23:59:59Z"},
+        )["user"]["contributionsCollection"]
+        commits += c["totalCommitContributions"]
+        prs += c["totalPullRequestContributions"]
+    return [repos, stars, commits, prs]
 
 
 def render(values):
