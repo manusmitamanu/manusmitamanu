@@ -6,19 +6,21 @@
 
 <img src="assets/cat-supervisor.png" alt="" align="right" width="150">
 
-hi, i'm manusmita. i study computer science at RV University in bangalore and spend most of my time around ML: training models, then interrogating them about their choices.
+Hi, I'm Manusmita, a Computer Science student. My work centres on machine learning: building models, evaluating them, and working out why they make the predictions they do, which is what draws me to explainable AI...I also understanding AIML theoretical concepts (working on implementing the theory 😿)
 
-currently trying to build agents...so far no comments.
+I work mainly in Python, with C (lowk) and JavaScript alongside it. For data and classical ML I use NumPy, Pandas, scikit-learn and XGBoost (one project) in Jupyter notebooks, TensorFlow for deep learning, OpenCV for computer vision, and Flask when a project needs a small web interface. My repositories here include a DSA visualizer (private rn) and my LeetCode solutions.
 
-outside of that: baking, cats...depending on the day.
+Right now I'm trying to build AI agents. So far, no comments 😢.
 
-<br>
-
-**into:** &nbsp;machine learning &nbsp;/&nbsp; deep learning &nbsp;/&nbsp; computer vision &nbsp;/&nbsp; nlp &nbsp;/&nbsp; explainable ai &nbsp;/&nbsp; agentic ai
+Outside of tech: baking and cats, depending on the day.
 
 <br>
 
-<sub>things i've used, not a flex</sub>
+**Interests** &nbsp; Machine Learning &nbsp;/&nbsp; Deep Learning &nbsp;/&nbsp; Computer Vision &nbsp;/&nbsp; NLP &nbsp;/&nbsp; Explainable AI &nbsp;/&nbsp; Agentic AI
+
+<br>
+
+<sub>Languages, libraries and tools</sub>
 
 <p>
   <img src="https://img.shields.io/badge/Python-5C061C?style=flat-square&logo=python&logoColor=F3E5DC" alt="Python">
@@ -39,15 +41,15 @@ outside of that: baking, cats...depending on the day.
 <br>
 
 <p>
-  <img src="assets/stats.svg" alt="GitHub stats" width="520">
+  <img src="assets/stats.svg" alt="GitHub stats" width="480">
 </p>
 
 <br>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/manusmita-mishra/"><img src="assets/linkedin.svg" alt="find me on linkedin" width="200"></a>
+  <a href="https://www.linkedin.com/in/manusmita-mishra/"><img src="assets/linkedin.svg" alt="find me on linkedin" width="230"></a>
 </p>
 
 <p align="center">
-  <img src="assets/black-cat.png" alt="" width="340">
+  <img src="assets/black-cat.png" alt="" width="48">
 </p>
