@@ -49,5 +49,5 @@ outside of that: baking, cats...depending on the day.
 </p>
 
 <p align="center">
-  <img src="assets/black-cat.png" alt="" width="380">
+  <img src="assets/black-cat.png" alt="" width="340">
 </p>
