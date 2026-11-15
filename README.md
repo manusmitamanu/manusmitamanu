@@ -8,9 +8,9 @@
 
 hi, i'm manusmita. i study computer science at RV University in bangalore and spend most of my time around ML: training models, then interrogating them about their choices.
 
-currently poking at agentic ai. so far it's very confident and only sometimes correct, which i find relatable.
+currently trying to build agents...so far no comments.
 
-outside of that: baking, cats. in that order, depending on the day.
+outside of that: baking, cats...depending on the day.
 
 <br>
 
@@ -45,9 +45,9 @@ outside of that: baking, cats. in that order, depending on the day.
 <br>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/manusmita-mishra/">linkedin</a>
+  <a href="https://www.linkedin.com/in/manusmita-mishra/"><img src="assets/linkedin.svg" alt="find me on linkedin" width="200"></a>
 </p>
 
 <p align="center">
-  <img src="assets/black-cat.png" alt="" width="48">
+  <img src="assets/black-cat.png" alt="" width="300">
 </p>
