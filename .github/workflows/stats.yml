@@ -2,7 +2,11 @@ name: update stats
 
 on:
   schedule:
-    - cron: "0 3 * * *"
+    - cron: "0 */6 * * *"
+  push:
+    branches: [main]
+    paths:
+      - ".github/scripts/make_stats.py"
   workflow_dispatch:
 
 permissions:
