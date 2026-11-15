@@ -2,11 +2,11 @@
   <rect x="0.5" y="0.5" width="599" height="159" rx="14" fill="#160B10" stroke="#8B263D" stroke-opacity="0.7"/>
   <text x="36" y="46" font-family="Lora, Georgia, serif" font-size="17" font-style="italic" fill="#D9A0AA">the numbers, such as they are</text>
   <line x1="36" y1="60" x2="84" y2="60" stroke="#8B263D" stroke-width="2.5" stroke-linecap="round"/>
-  <text x="36" y="104" font-family="Lora, Georgia, serif" font-size="36" fill="#F3E5DC">3</text>
+  <text x="36" y="104" font-family="Lora, Georgia, serif" font-size="36" fill="#F3E5DC">4</text>
   <text x="36" y="128" font-family="Mulish, 'Work Sans', 'Segoe UI', Arial, sans-serif" font-size="13" fill="#D9A0AA">repositories</text>
-  <text x="176" y="104" font-family="Lora, Georgia, serif" font-size="36" fill="#F3E5DC">0</text>
+  <text x="176" y="104" font-family="Lora, Georgia, serif" font-size="36" fill="#F3E5DC">1</text>
   <text x="176" y="128" font-family="Mulish, 'Work Sans', 'Segoe UI', Arial, sans-serif" font-size="13" fill="#D9A0AA">stars</text>
-  <text x="316" y="104" font-family="Lora, Georgia, serif" font-size="36" fill="#F3E5DC">30</text>
+  <text x="316" y="104" font-family="Lora, Georgia, serif" font-size="36" fill="#F3E5DC">49</text>
   <text x="316" y="128" font-family="Mulish, 'Work Sans', 'Segoe UI', Arial, sans-serif" font-size="13" fill="#D9A0AA">commits</text>
   <text x="456" y="104" font-family="Lora, Georgia, serif" font-size="36" fill="#F3E5DC">0</text>
   <text x="456" y="128" font-family="Mulish, 'Work Sans', 'Segoe UI', Arial, sans-serif" font-size="13" fill="#D9A0AA">pull requests</text>
